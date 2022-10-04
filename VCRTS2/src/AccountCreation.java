@@ -1,15 +1,18 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.io.File;
 
 import javax.swing.*;
 
-public class AccountCreation {
+public class AccountCreation implements ActionListener{
 
 	JFrame frame = new JFrame();
 
-	private static final int FRAME_WIDTH = 500;
-	private static final int FRAME_HEIGHT = 500;
+	private static final int FRAME_WIDTH = 600;
+	private static final int FRAME_HEIGHT = 600;
 
 	private JLabel test;
 	private JLabel confirmLabel;
@@ -32,15 +35,19 @@ public class AccountCreation {
 		test.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 
 		nameField = new JTextField("Name: ");
-		nameField.setBounds(225, 100, 150, 25);
+		nameField.setBounds(200, 100, 150, 25);
 		emailField = new JTextField("Email: ");
-		emailField.setBounds(225, 230, 150, 25);
+		emailField.setBounds(200, 170, 150, 25);
 		phoneNumField = new JTextField("Phone Number: ");
-		phoneNumField.setBounds(225, 360, 150, 25);
+		phoneNumField.setBounds(200, 240, 150, 25);
+		
 		c1 = new JCheckBox("Vehicle Owner");
-		c1.setBounds(45, 150, 150, 25);
+		c1.setBounds(200, 280, 150, 25);
+	    c1.setSelected(false);
+	    
 		c2 = new JCheckBox("Vehicle Renter");
-		c2.setBounds(45, 300, 150, 25);
+		c2.setBounds(200, 320, 150, 25);
+		c2.setSelected(false);
 
 		//createButtonName();
 		//createButtonEmail();
@@ -59,13 +66,17 @@ public class AccountCreation {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-
+	
+	
 	private void createButtonCreateAccount() {
-		// TODO Auto-generated method stub
+		createAccount = new JButton("Create Account");
+		createAccount.setBounds(200,410,150,25);
+		createAccount.setBackground(lav);
 		
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		//File user = new File(usernames.txt);
 		String name = nameField.getText();
 		confirmLabel.setText(name);
 		String email = emailField.getText();
@@ -106,6 +117,7 @@ public class AccountCreation {
 		//panel.add(enterName);
 		//panel.add(enterEmail);
 		//panel.add(enterPhoneNum);
+		panel.add(createAccount);
 		panel.add(c1);
 		panel.add(c2);
 

@@ -27,11 +27,11 @@ public class LaunchPage implements ActionListener{
 		frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setFocusable(true);
-		welcomeLabel = new JLabel("Welcome to VCRTS"); 
-		welcomeLabel.setBounds(100, 10, 300, 30); //Set location of label
+		welcomeLabel = new JLabel("Welcome to VCRTS", SwingConstants.CENTER); 
+		welcomeLabel.setBounds(300, 10, 300, 30); //Set location of label
 		welcomeLabel.setFont(new Font("Comic Sans MS", Font.BOLD, 30));
-		optionLabel = new JLabel("Please login or create an account below");
-		optionLabel.setBounds(105, 100, 300, 30); //Set location of label
+		optionLabel = new JLabel("Please login or create an account below", SwingConstants.CENTER);
+		optionLabel.setBounds(305, 100, 300, 30); //Set location of label
 		optionLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 		/*loginLabel = new JLabel("Please provide your login info");
 		  loginLabel.setBounds(200, 200, 300, 30); 
@@ -97,7 +97,7 @@ public class LaunchPage implements ActionListener{
 	private void createButtonAccount() {
 		ButtonAccount = new JButton("Create Account");
 		// Dimension size = ButtonAccount.getPreferredSize();
-		ButtonAccount.setBounds(180, 220, 140, 25); //Set location of button\	
+		ButtonAccount.setBounds(380, 220, 140, 25); //Set location of button\	
 		ButtonAccount.setBackground(lav);
 		ButtonAccount.addActionListener(this);
 
@@ -107,7 +107,7 @@ public class LaunchPage implements ActionListener{
 	private void createButtonLogin() {
 		ButtonLogin = new JButton("Login");
 		// Dimension size = ButtonLogin.getPreferredSize();
-		ButtonLogin.setBounds(180, 180, 140, 25); //Set location of button
+		ButtonLogin.setBounds(380, 180, 140, 25); //Set location of button
 		ButtonLogin.setBackground(lav);
 		ButtonLogin.addActionListener(this);
 	}
