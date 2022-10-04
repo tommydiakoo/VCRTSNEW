@@ -7,8 +7,8 @@ public class LaunchPage implements ActionListener{
 
 	
 	//Variables for size of Entire GUI
-	private static final int FRAME_WIDTH = 500;
-	private static final int FRAME_HEIGHT = 500;
+	private static final int FRAME_WIDTH = 1000;
+	private static final int FRAME_HEIGHT = 600;
 
 	JFrame frame = new JFrame();
 	//private JTextField nameField;
